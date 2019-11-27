@@ -1,9 +1,9 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { theme } from '../styles/styles'
-import { IStyleMap } from '../types/IStyleMap'
-import LanguageSwitch from './languageSwitch'
+import { theme } from '../styles/styles';
+import { IStyleMap } from '../types/IStyleMap';
+import LanguageSwitch from './languageSwitch';
 
 const styles: IStyleMap = {
   footerText: theme.typography.pXSmall,
@@ -18,10 +18,10 @@ const styles: IStyleMap = {
     marginTop: '12px',
     padding: '48px 0 32px',
   },
-}
+};
 
 const Footer = () => {
-  const { t, ready } = useTranslation()
+  const { t, ready } = useTranslation();
 
   return (
     <footer style={styles.footerWrapper}>
@@ -30,7 +30,7 @@ const Footer = () => {
       </p>
       {ready ? <LanguageSwitch /> : <div>Loading...</div>}
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

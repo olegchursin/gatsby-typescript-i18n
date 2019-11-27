@@ -5,14 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import './layout.css'
-import '../../i18n/initI18n'
+import './layout.css';
+import '../../i18n/initI18n';
 
-import React from 'react'
+import React from 'react';
 
-import { IStyleMap } from '../types/IStyleMap'
-import Footer from './footer'
-import Header from './header'
+import { IStyleMap } from '../types/IStyleMap';
+import Footer from './footer';
+import Header from './header';
 
 const styles: IStyleMap = {
   content: {
@@ -23,12 +23,12 @@ const styles: IStyleMap = {
     maxWidth: 1280,
     padding: `0px 1rem 1.45rem`,
   },
-}
+};
 
 interface ILayoutProps {
-  readonly location?: Location
-  readonly title?: string
-  readonly children?: JSX.Element[]
+  readonly location?: Location;
+  readonly title?: string;
+  readonly children?: JSX.Element[];
 }
 
 const Layout = ({ children }: ILayoutProps) => {
@@ -42,7 +42,7 @@ const Layout = ({ children }: ILayoutProps) => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

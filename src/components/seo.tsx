@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
-import Helmet from 'react-helmet'
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const siteInfoQuery = graphql`
   query {
@@ -19,13 +19,13 @@ const siteInfoQuery = graphql`
       }
     }
   }
-`
+`;
 
 interface ISEOProps {
-  readonly description?: string
-  readonly lang?: string
-  readonly meta?: any
-  readonly title: string
+  readonly description?: string;
+  readonly lang?: string;
+  readonly meta?: any;
+  readonly title: string;
 }
 
 const SEO: React.FC<ISEOProps> = ({
@@ -34,9 +34,9 @@ const SEO: React.FC<ISEOProps> = ({
   meta = [],
   title,
 }) => {
-  const { site } = useStaticQuery(siteInfoQuery)
+  const { site } = useStaticQuery(siteInfoQuery);
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -80,7 +80,7 @@ const SEO: React.FC<ISEOProps> = ({
         },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

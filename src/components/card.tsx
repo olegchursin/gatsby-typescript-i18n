@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
-import { theme } from '../styles/styles'
-import { IStyleMap } from '../types/IStyleMap'
+import { theme } from '../styles/styles';
+import { IStyleMap } from '../types/IStyleMap';
 
 const styles: IStyleMap = {
   img: {
@@ -17,12 +17,12 @@ const styles: IStyleMap = {
     minWidth: '200px',
     padding: '18px 24px',
   },
-}
+};
 
 interface ICardProps {
-  readonly img: HTMLImageElement | ReactNode
-  readonly title: string
-  readonly cardLink?: string
+  readonly img: HTMLImageElement | ReactNode;
+  readonly title: string;
+  readonly cardLink?: string;
 }
 
 const Card: React.FC<ICardProps> = ({ img, title, cardLink }) => {
@@ -30,15 +30,15 @@ const Card: React.FC<ICardProps> = ({ img, title, cardLink }) => {
     <a style={styles.p} href={cardLink}>
       {title}
     </a>
-  )
-  const textTitle = <p>{title}</p>
+  );
+  const textTitle = <p>{title}</p>;
 
   return (
     <div style={styles.wrapper}>
       <div style={styles.img}>{img}</div>
       {cardLink ? linkTitle : textTitle}
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { theme } from '../styles/styles'
+import { theme } from '../styles/styles';
 
 const styles = {
   h3: {
@@ -8,11 +8,11 @@ const styles = {
     margin: '32px 0 18px',
   },
   p: theme.typography.pDefault,
-}
+};
 
 interface ITextSectionProps {
-  readonly title: string
-  readonly paragraph: string
+  readonly title: string;
+  readonly paragraph: string;
 }
 
 const TextSection: React.FC<ITextSectionProps> = ({
@@ -26,7 +26,7 @@ const TextSection: React.FC<ITextSectionProps> = ({
       <p style={styles.p}>{paragraph}</p>
       {children ? children : null}
     </>
-  )
-}
+  );
+};
 
-export default TextSection
+export default TextSection;
