@@ -1,4 +1,4 @@
-# gatsby Starter with TypeScript and i18n baked in
+# GatsbyJS Starter with TypeScript and i18n baked in
 
 ## Develop
 
@@ -14,7 +14,7 @@
 
 ## Deploy
 
-- pcik your favorite deploy mechanism (we love Netlify)
+- pick your favorite deploy mechanism (we love Netlify)
 
 ### What are these `gatsby-` files
 
