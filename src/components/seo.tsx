@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import Helmet from 'react-helmet'
 
 const siteInfoQuery = graphql`
   query {
@@ -19,68 +19,68 @@ const siteInfoQuery = graphql`
       }
     }
   }
-`;
+`
 
 interface ISEOProps {
-  readonly description?: string;
-  readonly lang?: string;
-  readonly meta?: any;
-  readonly title: string;
+  readonly description?: string
+  readonly lang?: string
+  readonly meta?: any
+  readonly title: string
 }
 
 const SEO: React.FC<ISEOProps> = ({
-  description = "",
-  lang = "en",
+  description = '',
+  lang = 'en',
   meta = [],
-  title
+  title,
 }) => {
-  const { site } = useStaticQuery(siteInfoQuery);
+  const { site } = useStaticQuery(siteInfoQuery)
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={title}
       titleTemplate={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription
-        }
+          content: metaDescription,
+        },
       ].concat(meta)}
     />
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO

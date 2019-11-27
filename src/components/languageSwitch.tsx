@@ -1,40 +1,40 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import { theme } from "../styles/styles";
-import { IStyleMap } from "../types/IStyleMap";
+import { theme } from '../styles/styles'
+import { IStyleMap } from '../types/IStyleMap'
 
 const styles: IStyleMap = {
   langSwitch: {
-    cursor: "pointer",
-    margin: "0 8px"
+    cursor: 'pointer',
+    margin: '0 8px',
   },
   textSection: {
     ...theme.typography.pXSmall,
-    display: "flex"
-  }
-};
+    display: 'flex',
+  },
+}
 
 const langSwitches = {
   en: {
-    title: "English",
-    slug: "en"
+    title: 'English',
+    slug: 'en',
   },
   de: {
-    title: "Deutsch",
-    slug: "de"
-  }
-};
+    title: 'Deutsch',
+    slug: 'de',
+  },
+}
 
 const LanguageSwitch: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation()
 
   const handleSelectLanguage = (e: React.MouseEvent) => {
-    const target = e.target as HTMLElement;
-    const lang: string = target.id;
+    const target = e.target as HTMLElement
+    const lang: string = target.id
 
-    i18n.changeLanguage(lang);
-  };
+    i18n.changeLanguage(lang)
+  }
 
   const langSwitch = Object.values(langSwitches).map(langSwitch => {
     return (
@@ -46,10 +46,10 @@ const LanguageSwitch: React.FC = () => {
       >
         {langSwitch.title}
       </div>
-    );
-  });
+    )
+  })
 
-  return <div style={styles.textSection}>{langSwitch}</div>;
-};
+  return <div style={styles.textSection}>{langSwitch}</div>
+}
 
-export default LanguageSwitch;
+export default LanguageSwitch
