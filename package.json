@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-typescript-i18n",
+  "private": false,
+  "description": "Gatsby Starter with TypeScript and i18n baked in",
+  "version": "0.0.1",
+  "author": "Oleg Chursin <olegchursin@gmail.com>",
+  "dependencies": {
+    "@svgr/cli": "^4.3.3",
+    "gatsby": "^2.15.31",
+    "gatsby-cli": "^2.8.14",
+    "gatsby-image": "^2.2.24",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^3.0.12",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.28",
+    "gatsby-plugin-typescript": "^2.1.11",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-transformer-sharp": "^2.2.20",
+    "i18next": "^18.0.1",
+    "i18next-browser-languagedetector": "^4.0.0",
+    "i18next-xhr-backend": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-i18next": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby starter, TypeScript, i18n"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -o",
+    "format": "prettier --parser typescript --trailing-comma es5 --single-quote --write \"src/**/*.ts*\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "type-check": "tsc --noEmit",
+    "svg": "svgr -d src/svg/ assets/svg --ext tsx"
+  }
+}
